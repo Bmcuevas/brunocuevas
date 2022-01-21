@@ -433,7 +433,7 @@
 
 }
 
-@media screen and(max-width:480px) {
+@media screen and (max-width: 815px) {
 	.main_img_card{
 		width:250px; 
 		height: 250px;
