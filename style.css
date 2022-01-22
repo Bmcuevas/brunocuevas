@@ -1,3 +1,5 @@
+/* NAVBAR */
+
 * { 
 	box-sizing: border-box;
 	padding: 0;
@@ -188,13 +190,49 @@
 	}
 }
 
-/*===============
- Hero Section 
-================*/
+
+
+/* ===================== 
+HERO 
+========================*/
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
 .hero{
-	background: #0000;
-	background: linear-gradient(to right, #161616, #000000);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animate 20s ease-in-out infinite;   
+    background-size: cover;
 	padding: 200px 0;
+}
+
+.outer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 111.5vh;
+    background: rgba(0,0,0,0.6)
+}
+@keyframes animate{ 
+    0%, 100%{
+        background-image: url(images/1.jpg);
+    }
+    25%{
+        background-image: url(images/2.jpg);
+    }
+    50%{
+        background-image: url(images/3.jpg);
+    }
+    75%{
+        background-image: url(images/4.jpg);
+    }
 }
 
 .hero_container{ 
@@ -219,7 +257,7 @@
 	/* Add background to the Spamed word */
 	background: #1a2a6c; 
 	background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); 
-	background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); 
+	background: linear-gradient(to right, #fdbb2d, #b440e9, #f64f59);
 	background-size: 100%;
 
 	/*Combine the background with the word */
@@ -231,9 +269,9 @@
 
 .hero_description{
 	font-size: 60px;
-	background: #3a6186;  
-	background: -webkit-linear-gradient(to right, #89253e, #3a6186);  
-	background: linear-gradient(to right, #89253e, #3a6186); 
+	background: #8A2387;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #F27121, #E94057, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -262,7 +300,6 @@
 	}
 }
 
-/* About Section */
 .main{ 
 	background-color: #131313;
 	padding: 10rem 0; 
@@ -319,6 +356,7 @@
 	font-size: 1rem;
 	font-weight: 700;
 	text-align: justify;
+	font-weight: 300;
 }
 
 .main_btn{ 
@@ -372,27 +410,13 @@
 
 .main_img_card{ 
 	margin:10px; 
-	height: 500px;
 	width: 500px;
 	border-radius: 4px;
 	display: flex; 
 	flex-direction: column;
 	justify-content: center;
-	color: white; 
-	background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
-
-.fa-layer-group,
-.fa-users{
-	font-size: 14rem;
-}
-
-#card-2{ 
-	background: #ff512f;  
-	background: -webkit-linear-gradient(to right, #dd2476, #ff512f);  
-	background: linear-gradient(to right, #dd2476, #ff512f);
-}
 
 /* Mobile Responsive */
 
@@ -411,8 +435,8 @@
 		justify-content: center;
 	}
 	.main_img_card{
-		height: 425px;
 		width: 425px;
+		margin-bottom: 2rem; 
 	}
 	.main_content{
 		text-align: center; 
@@ -436,11 +460,10 @@
 @media screen and (max-width: 815px) {
 	.main_img_card{
 		width:250px; 
-		height: 250px;
 	}
 
 	.fa-users, .fa-layer-group{
-		font-size: 4rem;
+		font-size: 6rem;
 	}
 
 	.main_content h1{
@@ -452,7 +475,7 @@
 		font-size: 2rem;
 	}
 	.main_content p{
-		font-size: 1rem;
+		font-size: .8rem;
 	}
 	.main_btn {
 		padding: 12px 36px; 
@@ -460,7 +483,16 @@
 	}
 }
 
-/* Services Section */
+/* ============================
+Services Section
+=============================== */
+
+/* Fonts */
+
+.fa-globe-americas, .fa-code, .fa-chart-pie, .fa-book-reader{
+	font-size: 5rem;
+}
+
 .services{
 	background: #131313;
 	display: flex; 
@@ -468,12 +500,12 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	padding: 10rem 0;
+	padding: 5rem 0;
 }
 
 .services h1{ 
-	background: #8A2387;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+	background: #8A2387;  
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  
 	background: linear-gradient(to right, #F27121, #E94057, #8A2387);
 	background-size: 100%;
 	-webkit-background-clip: text;
@@ -481,7 +513,7 @@
 	-webkit-text-fill-color:  transparent;
 	-moz-text-fill-color: transparent;
 	margin-bottom: 5rem; 
-	font-size: 2.5rem;
+	font-size: 4rem;
 
 }
 
@@ -499,34 +531,40 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	color: white; 
-	background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); 
+	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	transition: 0.3s ease-in;
+
 }
 
+
+.services_card:nth-child(1){
+	background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+
+
+}
 .services_card:nth-child(2){
-	background: #B993D6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+	background: linear-gradient(to right, #f64f59, #b440e9, #12c2e9);
+	
 }
 
 .services_card:nth-child(3){
-	background: #B993D6;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #12c2e9, #b440e9, #f64f59);
 
 }
 
 .services_card h2{
 	text-align: center;
+	margin-top: 24px;
 }
 
 .services_card p{
 	text-align: center;
-	margin-top: 24px; 
+	margin: 24px 24px; 
 	font-size: 20px;
+	font-weight: 200;
 }
 
 .services_btn{
@@ -535,24 +573,23 @@
 	font-size: 16px;
 }
 
-.services_card button{
-	color: white;
-	padding: 14px 24px;
-	border: none; 
-	outline: none;
-	border-radius: 4px;
-	background: #131313; 
-	font-size: 1rem;
-}
-.services_card button:hover{
-	cursor:pointer;
-
-}
 
 .services_card:hover{
 	transform: scale(1.075);
 	transition: 0.3s ease-in;
 	cursor: pointer;
+}
+
+.main_img_card_2{ 
+	margin:10px; 
+	height: 500px;
+	width: 500px;
+	border-radius: 4px;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	color: white; 
+	background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
 /* For different screen sizes */
@@ -570,7 +607,173 @@
 	}
 }
 
-/* Footer CSS */
+/*========================= 
+DerkisHaus
+===========================*/
+
+
+.derkishaus { 
+	color:#fff; 
+	width: 100%;
+}
+
+/* .derkishaus h1{ 
+	background: #8A2387;  
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387); 
+	background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color:  transparent;
+	-moz-text-fill-color: transparent;
+	margin-bottom: 31px;} */
+
+
+.derkishaus h2{ 
+	font-size: 60px;
+	background: #3a6186;  
+	background: -webkit-linear-gradient(to right, #89253e, #3a6186);  
+	background: linear-gradient(to right, #89253e, #3a6186); 
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+.derkishaus p{
+	margin-top: 1rem; 
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: justify;
+}
+
+.main_btn{ 
+	font-size: 1.8rem;
+	/*webpage to get gradient*/
+   background: #8A2387; 
+   background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387); 
+   background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+   padding: 20px 60px; 
+   border: none; 
+   border-radius: 4px;
+   margin-top: 2rem;
+   cursor: pointer;
+   position: relative;
+   transition: all 0.35s; 
+   outline: none; 
+}
+
+.main_btn a{
+	position: relative;
+	z-index: 2;
+	color: white;
+	/*Saco el unline  */
+	text-decoration: none; 
+}
+
+.main_btn:after{ 
+	position: absolute; 
+	content: ""; 
+	top: 0; 
+	left: 0; 
+	width: 0; 
+	height: 100%; 
+	background: #ff1ead;
+	transition: all 0.5s;
+	border-radius: 4px;
+}
+
+.main_btn:hover{ 
+	color: white; 
+
+}
+
+.main_btn:hover:after{
+	width: 100%;
+}
+
+.dh_img_container{ 
+	text-align: center;
+}
+
+.dh_img{ 
+	margin-left:40px; 
+	width: 600px;
+	border-radius: 4px;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 1100px) { 
+	.main_container{
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin: 0 auto;
+		height: 90%;
+	 }
+	.dh_img_container { 
+		display: flex; 
+		justify-content: center;
+		margin-left:-40px; 
+	}
+
+	.derkishaus{
+		text-align: center; 
+		margin-bottom: 4rem; 
+	}
+	.derkishaus h1{ 
+		font-size: 2.5rem;
+		margin-top: 2rem;
+	}
+	.derkishaus h2{
+		font-size: 3rem;
+	}
+
+	.derkishaus p{ 
+		margin-top:1rem; 
+		font-size: 1rem;
+		font-weight: 300;
+	}
+
+}
+
+@media screen and (max-width: 815px) {
+	.dh_img{
+		width:300px; 
+	}
+
+	.fa-users, .fa-layer-group{
+		font-size: 6rem;
+	}
+
+	.derkishaus h1{
+		font-size: 2rem;
+		margin-top: 2rem;
+
+	}
+	.derkishaus h2{
+		font-size: 2rem;
+	}
+	.derkishaus p{
+		font-size: .8rem;
+	}
+	.main_btn {
+		padding: 12px 36px; 
+		margin: 2.5rem 0; 
+	}
+}
+
+/*========================= 
+Footer CSS 
+===========================*/
 
 .footer_container{ 
 	background-color: #131313;
