@@ -1133,3 +1133,75 @@ CONTACT
 	}
   }
   
+  
+/* ============================
+  My Work
+============================  */
+
+.my-work {
+    background-color: #131313;
+    color:#131313;
+    text-align: center;   
+}
+
+.my-work h2{
+	background: #8A2387;  
+	background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  
+	background: linear-gradient(to right, #F27121, #E94057, #29b8b8);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color:  transparent;
+	-moz-text-fill-color: transparent;
+	margin-bottom: 2rem; 
+	font-size: 4rem;
+}
+
+.my-work p{
+	font-size: 24px;
+	color: white; 
+	padding-bottom: 24px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-flow: dense;
+}
+
+.portfolio__item {
+    background: #131313;
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
