@@ -1,4 +1,6 @@
-/* NAVBAR */
+/* ========================
+NAVBAR 
+========================*/
 
 * { 
 	box-sizing: border-box;
@@ -106,7 +108,7 @@
 
 
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1100px){
 	.navbar_container{
 		display: flex;
 		justify-content: space-between;
@@ -192,7 +194,7 @@
 
 
 
-/* ===================== 
+/* ======================
 HERO 
 ========================*/
 body{
@@ -213,12 +215,12 @@ body{
 }
 
 .outer{
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: absolute; 
+    top: 80px;
     width: 100%;
-    height: 111.5vh;
-    background: rgba(0,0,0,0.6)
+	background-size: cover;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
 }
 @keyframes animate{ 
     0%, 100%{
@@ -288,17 +290,21 @@ body{
 	border-bottom: 4px solid rgb(132, 0, 255);
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 1100px) { 
 	.hero_heading{
-		font-size: 60px;
+		font-size: 55px;
 	}
 	.hero_description{
-		font-size: 40px; 
+		font-size: 35px; 
 	}
 	.hero_orientation{
-		font-size: 16px;
+		font-size: 20px;
 	}
 }
+
+/* ======================================
+MAIN
+ ====================================== */
 
 .main{ 
 	background-color: #131313;
@@ -457,7 +463,7 @@ body{
 
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 900px) {
 	.main_img_card{
 		width:250px; 
 	}
@@ -747,7 +753,8 @@ DerkisHaus
 
 @media screen and (max-width: 815px) {
 	.dh_img{
-		width:300px; 
+		width:300px;
+		margin-top: -40px; 
 	}
 
 	.fa-users, .fa-layer-group{
