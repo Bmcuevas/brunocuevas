@@ -1163,6 +1163,16 @@ CONTACT
 	padding-bottom: 24px;
 }
 
+#spam-enjoy{
+	font-family: "Source Code Pro", monospace;
+	font-weight: 200;
+	background: #faf16f;
+	color: black;
+
+
+	
+}
+
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
