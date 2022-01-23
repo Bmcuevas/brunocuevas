@@ -2,11 +2,14 @@
 || NAVBAR 
 ========================*/
 
+
+
 * { 
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Kumbh Sans", sans-serif;
+	/* font-family: "Kumbh Sans", sans-serif; */
+	font-family: 'Source Sans Pro', sans-serif;
 	scroll-behavior: smooth;
  }
 
@@ -368,9 +371,9 @@ MAIN
 .main_content p{
 	margin-top: 1rem; 
 	font-size: 1rem;
-	font-weight: 700;
 	text-align: justify;
-	font-weight: 300;
+	/* font-weight: 700; */
+
 }
 
 .main_btn_2{ 
@@ -555,25 +558,27 @@ MAIN
 	justify-content: center;
 	align-items: center;
 	color: white; 
-	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #ff9966, #ff5e62);
 	transition: 0.3s ease-in;
 
 }
 
 
 .services_card:nth-child(1){
-	background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: linear-gradient(to right, #00b09b, #96c93d);
+	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	
 
 
 }
 .services_card:nth-child(2){
-	background: linear-gradient(to right, #f64f59, #b440e9, #12c2e9);
+	background: linear-gradient(to right, #fdc830, #f37335);
 	
 }
 
 .services_card:nth-child(3){
-	background: linear-gradient(to right, #12c2e9, #b440e9, #f64f59);
+	/* background: linear-gradient(to right, #12c2e9, #b440e9, #f64f59); */
+	background: linear-gradient(to right, #4ecdc4, #556270);
 
 }
 
