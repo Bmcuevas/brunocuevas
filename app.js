@@ -17,6 +17,10 @@ const highlightMenu = () =>{
     const homeMenu = document.querySelector("#home-page");
     const aboutMenu = document.querySelector("#about-page");
     const servicesMenu = document.querySelector("#services-page");
+    const derkisHaus = document.querySelector("#derkishaus-page");
+    const passions = document.querySelector("#passions-page");
+    const contact = document.querySelector("#contact-page");
+    
     let scrollPos = window.scrollY;
     console.log(scrollPos);
 
@@ -35,8 +39,25 @@ const highlightMenu = () =>{
     } else if (window.innerWidth > 960 && scrollPos < 2345) {
         servicesMenu.classList.add("highlight");
         aboutMenu.classList.remove("highlight");
+        derkisHaus.classList.remove("highlight");
         return;
+    } else if (window.innerWidth > 960 && scrollPos < 3400) {
+        servicesMenu.classList.remove("highlight");
+        derkisHaus.classList.add("highlight");
+        passions.classList.remove("highlight");
+        return;  
+    } else if (window.innerWidth > 960 && scrollPos < 4000) {
+      derkisHaus.classList.remove("highlight");
+      passions.classList.add("highlight");
+      contact.classList.remove("highlight");
+      return;  
+    } else if (window.innerWidth > 960 && scrollPos < 5000) {
+      passions.classList.remove("highlight");
+      contact.classList.add("highlight");
+      return;   
     }
+    
+    
 
     if ((elem && window.innerWidth < 960 && scrollPos < 600) || elem) { 
         elem.classList.remove("highlight");
