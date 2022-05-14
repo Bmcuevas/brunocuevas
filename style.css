@@ -851,7 +851,7 @@ Footer CSS
 }
 
 .footer_link_items a:hover{
-	color: #black; 
+	color: black; 
 	transition: 0.3 ease-out;
 
 }
